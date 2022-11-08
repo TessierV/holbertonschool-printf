@@ -6,17 +6,15 @@
 #include <string.h>
 #include <stdarg.h>
 /*type def*/
-typedef struct print_all
+typedef struct _printf
 {
 	char all;
 	void (*func)(va_list arguments);
 } v_types;
 
 /*function op.function*/
-void print_char(va_list arguments);
-void print_int(va_list arguments);
-void print_float(va_list arguments);
-void print_string(va_list arguments);
+int print_char(va_list arguments);
+int print_string(va_list arguments);
 /*function get.function*/
-void print_all(const char * const format, ...);
+int _printf(const char *format, ...);
 #endif
