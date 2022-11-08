@@ -5,11 +5,13 @@ int _printf(const char *format, ...)
 	va_list arguments;
 	int j;
 	int i = 0;
+
 	va_start(arguments, format);
+
 	j = 0;
-	while(format && format[j])
+	while (format && format[j])
 	{
-		if(format[j] == '%')
+		if (format[j] == '%')
 		{
 			i += get_func(arguments, format[j + 1]);
 			j++;
@@ -22,5 +24,5 @@ int _printf(const char *format, ...)
 		j++;
 	}
 	va_end(arguments);
-	return(j);
+	return (j);
 }

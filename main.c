@@ -9,51 +9,50 @@
  */
 int main(void)
 {
-	int len;
-	int len2;
-	unsigned int ui;
-	void *addr;
 	/*TASK 0*/
 	/*simple one*/
-	len = _printf("Let's try to printf a simple sentence.\n");
-	len2 = printf("Let's try to printf a simple sentence.\n");
+	printf("\n\nCheck beginning\n");
+	
 	/*print char*/
 	_printf("Character:[%c]\n", 'H');
 	printf("Character:[%c]\n", 'H');
 
+	printf("\n\nprint check checker for C\n");
+	_printf("%c", 'S');
+	printf("%c", 'S');
+
+	_printf("\nA char inside a sentence: %c. Did it work?\n", 'F');
+	printf("A char inside a sentence: %c. Did it work?\n", 'F');
+	
+	_printf("\nLet'see if the cast is correctly done: %c. Did it work?\n", 48);
+	printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
+	
+
 	/*print string*/
+	printf("\n\ncheck for S\n");
+
 	_printf("String:[%s]\n", "I am a string !");
 	printf("String:[%s]\n", "I am a string !");
 
-	/*test for %*/
-	len = _printf("Percent:[%%]\n");
-	len2 = printf("Percent:[%%]\n");	
+	printf("\ncheck checker for S\n");
+	_printf("%s", "This sentence is retrieved from va_args!\n");
+	printf("%s", "This sentence is retrieved from va_args!\n\n");
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+	printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know");
+	_printf("Complete the sentence: You %s nothing, Jon Snow.\n\n", (char *)0);
+	printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 
+	/*test for %*/
+	printf("\n\ncheck for %\n");
+	_printf("Percent:[%%]\n");
+	printf("Percent:[%%]\n");
+
+	printf("\n\ncheck checker for %\n");
+	_printf("%%");
+	printf("%%");
+	_printf("\nShould print a single percent sign: %%\n");
+	_printf("Should print a single percent sign: %%\n");
 	/*exclude*/
 
-	ui = (unsigned int)INT_MAX + 1024;
-	addr = (void *)0x7ffe637541f0;
-	/*Task 1*/
-	/*print d*/
-	_printf("Len:[%d]\n", len);
-	printf("Len:[%d]\n", len2);
-	_printf("Length:[%d, %i]\n", len, len);
-	printf("Length:[%d, %i]\n", len2, len2);
-	_printf("Negative:[%d]\n", -762534);
-	printf("Negative:[%d]\n", -762534);
-
-	_printf("Unsigned:[%u]\n", ui);
-	printf("Unsigned:[%u]\n", ui);
-	_printf("Unsigned octal:[%o]\n", ui);
-	printf("Unsigned octal:[%o]\n", ui);
-	_printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-	
-	_printf("Address:[%p]\n", addr);
-	printf("Address:[%p]\n", addr);
-
-	_printf("Unknown:[%r]\n");
-	printf("Unknown:[%r]\n");
-	
 	return (0);
 }
