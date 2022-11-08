@@ -1,39 +1,32 @@
 #include "main.h"
 
 /**
- * _printf - print all arguments
- * @format: input
+ * get_func - print all arguments
+ * @arguments: arguments inside the va_list
+ * @c_type: types inside print tab
+ * Return: 0
  */
 
-int _printf(const char *format, ...)
+int get_func(va_list arguments, char c_type)
 {
-	unsigned int i, j;
-	char *comma = "";
-	va_list arguments;
+	int i;
 	v_types print[] = {
 		{'c', print_char},
-		{'s', print_string},
+		{'s', print_string}
 	};
+	i = 0;
 
-	va_start(arguments, format);
-
-	j = 0;
-
-	while (format && format[j])
+	while (print[i].all)
 	{
-		i = 0;
-		while (print[i].all)
+		if (print[i].all == c_type)
 		{
-			if (print[i].all == format[j])
-			{
-				printf("%s", comma);
-				print[i].func(arguments);
-				comma = ", ";
-			}
-			i++;
+			return (print[i].func(arguments));
 		}
-		j++;
+		i++;
 	}
-	printf("\n");
-	va_end(arguments);
+	/**
+	 * putchar('%');
+	 * putchar(c_type);
+	 */
+	return (0);
 }

@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *print_char - print char
- *@arguments: arguments
+ * print_char - print char
+ * @arguments: arguments
+ * Return: 0
  */
 int print_char(va_list arguments)
 {
@@ -14,8 +15,9 @@ int print_char(va_list arguments)
 }
 
 /**
- *print_string - print string
- *@arguments: arguments
+ * print_string - print string
+ * @arguments: arguments
+ * Return: 0
  */
 
 int print_string(va_list arguments)
