@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_all - print all arguments
+ * _printf - print all arguments
  * @format: input
  */
 
