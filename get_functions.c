@@ -5,15 +5,13 @@
  * @format: input
  */
 
-void print_all(const char * const format, ...)
+int _printf(const char *format, ...)
 {
 	unsigned int i, j;
 	char *comma = "";
 	va_list arguments;
 	v_types print[] = {
 		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
 		{'s', print_string},
 	};
 
