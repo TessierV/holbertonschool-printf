@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _printf - print function
+ * @format: format
+ * Return: j
+ */
 int _printf(const char *format, ...)
 {
 	va_list arguments;
