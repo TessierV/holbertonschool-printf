@@ -24,12 +24,13 @@ int print_string(va_list arguments)
 {
 	int i;
 	char *s;
-	char n[]= "(null)";
+	char n[] = "(null)";
+
 	s = va_arg(arguments, char *);
 
 	if (s == NULL)
 	{
-		for ( i = 0; n[i]; i++)
+		for (i = 0; n[i]; i++)
 		{
 			putchar(n[i]);
 		}
