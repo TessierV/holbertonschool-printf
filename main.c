@@ -18,7 +18,7 @@ int main(void)
 	printf("Character:[%c]\n", 'H');
 
 	printf("\n\nprint check checker for C\n");
-	_printf("%c", 'S');
+	_printf("%c", "S\n");
 	printf("%c", 'S');
 
 	_printf("\nA char inside a sentence: %c. Did it work?\n", 'F');
