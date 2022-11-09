@@ -24,6 +24,11 @@ int _printf(const char *format, ...)
 			i += get_func(arguments, format[j + 1]);
 			j++;
 		}
+		else if ((format[j + 1] == 0 || format[j + 1] == '%') && format[j] == '%')
+		{
+			putchar(format[j]);
+			
+		}
 		else
 		{
 			i += 1;
