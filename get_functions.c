@@ -24,9 +24,7 @@ int get_func(va_list arguments, char c_type)
 		}
 		i++;
 	}
-	
-	 putchar('%');
-	 putchar(c_type);
-	 
+	putchar('%');
+	putchar(c_type);
 	return (2);
 }
