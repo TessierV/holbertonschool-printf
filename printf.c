@@ -10,15 +10,25 @@ int _printf(const char *format, ...)
 	int j;
 	int i = 0;
 
+	if (!format || !strcmp(format, "%"))
+	{
+		return (-1);
+	}
 	va_start(arguments, format);
 
 	j = 0;
-	while (format && format[j])
+	while (format[j])
 	{
 		if (format[j] == '%')
 		{
 			i += get_func(arguments, format[j + 1]);
 			j++;
+		}
+		else if ((format[j + 1] == 0 || format[j + 1] == '%') && format[j] == '%')
+		{
+			putchar('%');
+			j++;
+			i++;
 		}
 		else
 		{
@@ -30,5 +40,5 @@ int _printf(const char *format, ...)
 			return (-1);
 	}
 	va_end(arguments);
-	return (j);
+	return (i);
 }

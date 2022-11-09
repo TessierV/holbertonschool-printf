@@ -11,20 +11,35 @@ int print_char(va_list arguments)
 
 	c = va_arg(arguments, int);
 	putchar(c);
-	return (0);
+	return (1);
 }
 
 /**
  * print_string - print string
  * @arguments: arguments
- * Return: 0
+ * Return: i
  */
 
 int print_string(va_list arguments)
 {
-	int s;
+	int i;
+	char *s;
+	char n[]= "(null)";
+	s = va_arg(arguments, char *);
 
-	s = va_arg(arguments, int);
-	putchar(s);
-	return (0);
+	if (s == NULL)
+	{
+		for ( i = 0; n[i]; i++)
+		{
+			putchar(n[i]);
+		}
+	}
+	else
+	{
+		for (i = 0; s[i]; i++)
+		{
+			putchar(s[i]);
+		}
+	}
+	return (i);
 }
