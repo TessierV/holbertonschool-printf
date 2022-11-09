@@ -19,16 +19,16 @@ int _printf(const char *format, ...)
 	j = 0;
 	while (format[j])
 	{
-		if (format[j] == '%')
-		{
-			i += get_func(arguments, format[j + 1]);
-			j++;
-		}
-		else if ((format[j + 1] == 0 || format[j + 1] == '%') && format[j] == '%')
+		if ((format[j + 1] == 0 || format[j + 1] == '%') && format[j] == '%')
 		{
 			putchar('%');
 			j++;
 			i++;
+		}
+		else if (format[j] == '%')
+		{
+			i += get_func(arguments, format[j + 1]);
+			j++;
 		}
 		else
 		{
