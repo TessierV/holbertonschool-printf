@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	int j;
 	int i = 0;
 
-	if (!format)
+	if (!format || !strcmp(format, "%"))
 	{
 		return (-1);
 	}
