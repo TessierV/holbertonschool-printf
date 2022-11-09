@@ -22,9 +22,20 @@ int print_char(va_list arguments)
 
 int print_string(va_list arguments)
 {
-	int s;
-
-	s = va_arg(arguments, int);
-	putchar(s);
-	return (0);
+	int i;
+	char *s;
+	s = va_arg(arguments, char *);
+	for (i = 0; s[i]; i++)
+	{
+		if (s == NULL)
+		{
+			s = "(nil)";
+			putchar(s[i]);
+		}
+		else
+		{
+			putchar(s[i]);
+		}
+	}
+	return (i);
 }
