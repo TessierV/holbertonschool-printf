@@ -51,7 +51,7 @@ int main(void)
 	_printf("%%");
 	printf("%%");
 	_printf("\nShould print a single percent sign: %%\n");
-	_printf("Should print a single percent sign: %%\n");
+	printf("Should print a single percent sign: %%\n");
 	/*exclude*/
 
 	return (0);
