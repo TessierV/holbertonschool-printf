@@ -10,6 +10,10 @@ int _printf(const char *format, ...)
 	int j;
 	int i = 0;
 
+	if (!format)
+	{
+		return (-1);
+	}
 	va_start(arguments, format);
 
 	j = 0;
