@@ -36,8 +36,6 @@ int _printf(const char *format, ...)
 			putchar(format[j]);
 		}
 		j++;
-		if (format[i + 1] == '\0')
-			return (-1);
 	}
 	va_end(arguments);
 	return (i);
