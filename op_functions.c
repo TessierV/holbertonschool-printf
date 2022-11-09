@@ -17,22 +17,26 @@ int print_char(va_list arguments)
 /**
  * print_string - print string
  * @arguments: arguments
- * Return: 0
+ * Return: i
  */
 
 int print_string(va_list arguments)
 {
 	int i;
 	char *s;
+	char n[]= "(null)";
 	s = va_arg(arguments, char *);
-	for (i = 0; s[i]; i++)
+
+	if (s == NULL)
 	{
-		if (s == NULL)
+		for ( i = 0; n[i]; i++)
 		{
-			s = "(nil)";
-			putchar(s[i]);
+			putchar(n[i]);
 		}
-		else
+	}
+	else
+	{
+		for (i = 0; s[i]; i++)
 		{
 			putchar(s[i]);
 		}
