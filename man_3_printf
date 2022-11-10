@@ -41,9 +41,9 @@ Print a sentence with the conversion specifiers \fI%s\fR:
 .TP
 .B #include "main.h"
 .TP
-.B _printf("%s\n", "I love holberton !");
+.B _printf("%s", "I love holberton !");
 .TP
-.B  printf("%s\n", "I love holberton !");
+.B  printf("%s", "I love holberton !");
 .PP
 .PP
 .TP
