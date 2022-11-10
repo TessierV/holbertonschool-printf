@@ -39,7 +39,7 @@ Right now the program doesnt count all the advanced.
 .SH EXAMPLE:
 Print a sentence with the conversion specifiers \fI%s\fR:
 .TP
-.B #include "holberton.h"
+.B #include "main.h"
 .TP
 .B _printf("String:[%s]\n", "I love holberton !");
 .TP
