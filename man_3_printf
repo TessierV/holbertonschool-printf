@@ -1,7 +1,7 @@
 .\"Manpage for _Printf Project - task 2. Just because it's in print doesn't mean it's the gospel
 .TH man 3 "10 november 2022" "3.0" "_Printf Manual project"
-.SH NAME
-._printf
+.SH NAME:
+_printf
 .SH SYNOPSIS
 .B #include "main.h"
 .PP
@@ -11,14 +11,15 @@
 .B int _printf(const char *format, ...);
 .PP
 .SH DESCRIPTION
+.PP
+.B
 The functions _printf() mirroring the function of C library "printf()"
 The functions "printf()" formatted text to the standard output.
 .PP
-.SH _printf following conversion specifiers:
+.SH CONVERSION SPECIFIERS:
 .TP
 .B %, %%:
 The \fI%\fR arguments print a percent sign.
-
 .TP
 .B %c:
 The \fIint\fR arguments is converted to an char, and the resulting character is written.
@@ -37,7 +38,7 @@ Right now the program doesnt count all the advanced.
 .PP
 .SH EXAMPLE:
 Print a sentence with the conversion specifiers \fI%s\fR:
-.TP 
+.TP
 .B #include "holberton.h"
 .TP
 .B _printf("String:[%s]\n", "I love holberton !");
