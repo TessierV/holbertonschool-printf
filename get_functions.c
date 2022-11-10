@@ -12,7 +12,9 @@ int get_func(va_list arguments, char c_type)
 	int i;
 	v_types print[] = {
 		{'c', print_char},
-		{'s', print_string}
+		{'s', print_string},
+		{'d', print_dec},
+		{'i', print_dec}
 	};
 	i = 0;
 

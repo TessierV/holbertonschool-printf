@@ -16,6 +16,12 @@ typedef struct _printf
 /*function op.function*/
 int print_char(va_list arguments);
 int print_string(va_list arguments);
+/* print_int */
+void _abs(int *p);
+int recu_num(int *dptr, char *s);
+void print_num(int i, int neg, char *s);
+void print_int_min(void);
+int print_dec(va_list arguments);
 /*function get.function*/
 int get_func(va_list arguments, char c_type);
 /*function printf*/
