@@ -99,12 +99,14 @@ int print_dec(va_list arguments)
 	}
 	if (d < 0)
 		neg = 1;
+
 	if (d == INT_MIN)
 	{
 	print_int_min();
 	free(s);
 	return (11);
 	}
+
 	if (d == 0)
 	{
 		putchar('0');
@@ -112,8 +114,9 @@ int print_dec(va_list arguments)
 	}
 	_abs(dptr);
 	i = recu_num(dptr, s);
-	print_num(i, neg, s);
+	print_num(i - 1, neg, s);
 	free(s);
+
 	if (neg == 1)
 		i = (i + 1);
 	return (i);
