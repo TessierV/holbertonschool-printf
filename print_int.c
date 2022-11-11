@@ -91,7 +91,7 @@ int print_dec(va_list arguments)
 
 	dptr = &d;
 	d = va_arg(arguments, int);
-	s = malloc(sizeof(char) * 1000);
+	s = malloc(sizeof(char) * 10);
 	if (s == NULL)
 	{
 		free(s);
@@ -105,9 +105,16 @@ int print_dec(va_list arguments)
 	free(s);
 	return (11);
 	}
+	if (d == 0)
+	{
+		putchar('0');
+		return (1);
+	}
 	_abs(dptr);
 	i = recu_num(dptr, s);
 	print_num(i, neg, s);
 	free(s);
+	if (neg == 1)
+		i = (i + 1);
 	return (i);
 }
