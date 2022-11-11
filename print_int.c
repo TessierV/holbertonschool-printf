@@ -78,7 +78,7 @@ void print_int_min(void)
 /**
  * print_dec - print decimal
  * @arguments: arguments
- * Return: (i)
+ * Return: (0, 11, 1, i)
  */
 
 int print_dec(va_list arguments)
