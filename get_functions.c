@@ -4,7 +4,7 @@
  * get_func - print all arguments
  * @arguments: arguments inside the va_list
  * @c_type: types inside print tab
- * Return: 0
+ * Return: (2)
  */
 
 int get_func(va_list arguments, char c_type)
