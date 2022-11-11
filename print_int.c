@@ -91,7 +91,7 @@ int print_dec(va_list arguments)
 
 	dptr = &d;
 	d = va_arg(arguments, int);
-	s = malloc(sizeof(char) * 10);
+	s = malloc(sizeof(char) * 1000);
 	if (s == NULL)
 	{
 		free(s);
