@@ -8,7 +8,6 @@ printf() formatted text to the standard output.
 ## 📝PROTOTYPE:
 `int _printf(const char *format, ...);`
 
-![image](https://user-images.githubusercontent.com/113889290/201115294-982c74d1-45e2-4c41-8650-8645621f1da5.png)
 
 ## 📝CONVERSION SPECIFIERS - CS:
 ## 🔶Task 0:
